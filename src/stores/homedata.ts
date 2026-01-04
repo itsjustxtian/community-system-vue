@@ -1,0 +1,20 @@
+export const homedata = [
+  {
+    header: 'Characters',
+    description:
+      'View information about characters such as stats, skill descriptions, resonance sequences, and more.',
+    link: '/characters',
+  },
+  {
+    header: 'Weapons',
+    description:
+      'View information about weapons such as stats, passive effect descriptions, refinement levels, and more.',
+    link: '/weapons',
+  },
+  {
+    header: 'Planner',
+    description:
+      'Track your collection progress for ascending resonator ascension level and resonator talent level, and weapon level.',
+    link: '/planner',
+  },
+]

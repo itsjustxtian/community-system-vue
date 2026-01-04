@@ -6,10 +6,14 @@
     "cypress.config.*",
     "nightwatch.conf.*",
     "playwright.config.*",
-    "eslint.config.*"
+    "eslint.config.*",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue"
   ],
   "compilerOptions": {
-    "noEmit": true,
+    "composite": true,
+    "noEmit": false,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
 
     "module": "ESNext",

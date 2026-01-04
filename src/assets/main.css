@@ -1,4 +1,5 @@
 @import './base.css';
+@import 'tailwindcss';
 
 #app {
   max-width: 1280px;
@@ -10,26 +11,60 @@
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    text-shadow: 0px 0px 10px white;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+p {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.colored-number {
+  color: var(--color-gold-300);
+}
+
+.aero-damage {
+  color: var(--aero);
+  font-weight: 500;
+}
+
+.electro-damage {
+  color: var(--electro);
+  font-weight: 500;
+}
+
+.fusion-damage {
+  color: var(--fusion);
+  font-weight: 500;
+}
+
+.glacio-damage {
+  color: var(--glacio);
+  font-weight: 500;
+}
+
+.spectro-damage {
+  color: var(--spectro);
+  font-weight: 500;
+}
+
+.havoc-damage {
+  color: var(--havoc);
+  font-weight: 500;
+}
+
+.physical-damage {
+  font-weight: 500;
 }

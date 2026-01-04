@@ -1,44 +1,111 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  --six-star: #ff8e3d;
+  --five-star: #ffd000;
+  --four-star: #c883ec;
+  --three-star: #52b7ff;
+  --two-star: #bdff66;
+  --one-star: #c6c6ec;
+  --six-star-light: #ffc499;
+  --five-star-light: #ffe570;
+  --four-star-light: #dcb0f3;
+  --three-star-light: #85ccff;
+  --two-star-light: #d3ff99;
+  --one-star-light: #e8e8f2;
+  --six-star-foreground: #331500;
+  --five-star-foreground: #332a00;
+  --four-star-foreground: #260835;
+  --three-star-foreground: #003052;
+  --two-star-foreground: #1d3300;
+  --one-star-foreground: #0d0d26;
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  --color-gold-50: #fffee7;
+  --color-gold-100: #ffffc1;
+  --color-gold-200: #fffa86;
+  --color-gold-300: #ffef41;
+  --color-gold-400: #ffdf0d;
+  --color-gold-500: #ffd000;
+  --color-gold-600: #d19800;
+  --color-gold-700: #a66d02;
+  --color-gold-800: #89540a;
+  --color-gold-900: #74450f;
+  --color-gold-950: #442404;
 
-  --vt-c-indigo: #2c3e50;
+  --fusion-lighter: #f5a07c;
+  --fusion: #f0744e;
+  --fusion-darker: #eb4a24;
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --glacio-lighter: #7bc6fe;
+  --glacio: #41aefb;
+  --glacio-darker: #006fca;
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --electro-lighter: #d7b2ff;
+  --electro: #b46bff;
+  --electro-darker: #922eef;
+
+  --aero-lighter: #b2ffdd;
+  --aero: #55ffb5;
+  --aero-darker: #01b869;
+
+  --spectro-lighter: #faf08e;
+  --spectro: #f8e56c;
+  --spectro-darker: #e2b410;
+
+  --havoc-lighter: #f6abdb;
+  --havoc: #e649a6;
+  --havoc-darker: #b91d6d;
+
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+  --radius: 0.625rem;
 }
 
-/* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
+  --color-background: var(--background);
+  --color-background-soft: var(--background);
+  --color-background-mute: var(--background);
 
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
+  --color-border: var(--border);
+  --color-border-hover: var(--input);
 
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-heading: var(--foreground);
+  --color-text: var(--foreground);
 
   --section-gap: 160px;
+  --component-gap: 0.25rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
+    /* --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
 
@@ -47,6 +114,7 @@
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+    --router-link-active: var(--color-radical-red-main); */
   }
 }
 
@@ -78,6 +146,7 @@ body {
     'Fira Sans',
     'Droid Sans',
     'Helvetica Neue',
+    'Fredoka',
     sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
