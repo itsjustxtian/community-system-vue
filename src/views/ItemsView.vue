@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import EmptyLoading from '@/components/EmptyLoading.vue'
+import TagTooltips from '@/components/TagTooltips.vue'
 import { supabase } from '@/lib/supabase'
 import { onMounted, ref } from 'vue'
 
 const items = ref([])
+const loading = ref(false)
 
 async function getItems() {
+  loading.value = true
   const { data } = await supabase.from('items').select()
   if (!data) return
 
@@ -16,6 +20,7 @@ async function getItems() {
   })
 
   items.value = sorteddata
+  loading.value = false
 }
 
 function rarityClass(rarity: number) {
@@ -38,16 +43,25 @@ onMounted(() => {
 <template>
   <main>
     <div class="section-information">
-      <h1>Characters</h1>
-      <p>View all the Items in Wuthering Waves</p>
+      <h1>Items</h1>
+      <p>View all the Items in Wuthering Waves.</p>
     </div>
-    <div class="resonator-list">
+
+    <EmptyLoading
+      v-if="loading"
+      loading-title="Loading Items"
+      loading-description="Please wait a moment while we fetch the items."
+    />
+
+    <div v-else class="resonator-list">
       <div class="character" v-for="item in items" :key="item.name">
         <div class="character-icon" :class="rarityClass(item.rarity)">
           <img :src="item.image" alt="" />
         </div>
-        <div class="character-name">
-          <p class="text-ellipsis">{{ item.name }}</p>
+        <div class="character-name w-full">
+          <TagTooltips :content="item.name">
+            <p class="text-ellipsis text-nowrap overflow-clip">{{ item.name }}</p>
+          </TagTooltips>
         </div>
       </div>
     </div>
@@ -159,12 +173,9 @@ main {
 .character-name {
   text-align: center;
   padding: 0.2rem;
-  overflow: hidden;
 }
 
 .character-name p {
   font-weight: 400;
-  text-wrap: nowrap;
-  text-overflow: ellipsis;
 }
 </style>

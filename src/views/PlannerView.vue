@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import EmptyContent from '@/components/EmptyContent.vue'
+</script>
 
 <template>
-  <main>This is the PlannerView page.</main>
+  <main>
+    <EmptyContent />
+  </main>
 </template>

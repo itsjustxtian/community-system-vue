@@ -256,7 +256,7 @@ onMounted(() => {
       />
     </div>
 
-    <transition-group name="fade" tag="div" class="resonator-list">
+    <transition-group v-else name="fade" tag="div" class="resonator-list">
       <RouterLink
         class="character"
         v-for="resonator in resonators"
