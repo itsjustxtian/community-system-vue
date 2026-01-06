@@ -68,3 +68,23 @@ p {
 .physical-damage {
   font-weight: 500;
 }
+
+.text-five-star {
+  color: var(--five-star);
+}
+
+.text-four-star {
+  color: var(--four-star);
+}
+
+.text-three-star {
+  color: var(--three-star);
+}
+
+.text-two-star {
+  color: var(--two-star);
+}
+
+.text-one-star {
+  color: var(--one-star);
+}

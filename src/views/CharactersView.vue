@@ -10,6 +10,7 @@ import Button from '@/components/ui/button/Button.vue'
 import { attributes, weapontypes } from '@/stores/iconurl'
 import TagTooltips from '@/components/TagTooltips.vue'
 import { RouterLink } from 'vue-router'
+import { rarityClass } from '@/stores/functions'
 
 const resonators = ref([])
 const loading = ref(true)
@@ -90,10 +91,6 @@ function applySearchAndFilters(searchTerm: string) {
 function onSearching(e: Event) {
   searchTerm.value = (e.target as HTMLInputElement).value
   applySearchAndFilters(searchTerm.value)
-}
-
-function rarityClass(rarity: number) {
-  return rarity === 5 ? 'five-star' : 'four-star'
 }
 
 function showFilterToggles() {
@@ -249,6 +246,7 @@ onMounted(() => {
         </ToggleGroup>
       </div>
     </transition>
+
     <div v-if="loading" class="loading">
       <EmptyLoading
         loading-title="Loading Resonators..."
